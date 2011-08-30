@@ -44,10 +44,10 @@ set cpo&vim
 
 " ---------------------------------------------------------------------
 "  Map Interface: {{{2
-if !hasmapto('<Plug>SaveWinPosn')
+if !hasmapto('<Plug>SaveWinPosn') && !exists("g:dont_map_cec_commands")
  map <unique> <Leader>swp <Plug>SaveWinPosn
 endif
-if !hasmapto('<Plug>RestoreWinPosn')
+if !hasmapto('<Plug>RestoreWinPosn') && !exists("g:dont_map_cec_commands")
  map <unique> <Leader>rwp <Plug>RestoreWinPosn
 endif
 nmap <silent> <Plug>SaveWinPosn		:call SaveWinPosn()<CR>
